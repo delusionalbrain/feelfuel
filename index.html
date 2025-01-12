@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FeelFuel</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo"><img src="../images/logoo.png" style="height:45px;width:150px;"></div>
+        <nav class="navitems">
+            <a href="#about" style="display:inline-block;">About Us</a>
+            <a href="#articles" style="display:inline-block;">Articles</a>
+            <a href="#contact" style="display:inline-block;">Contact Us</a>
+            <a href="#chatbot" onclick="toggleChatbot()" style="display:inline-block;">BoostBot</a>
+        </nav>
+    </header>
+
+    <!-- Video Background with Gradient Overlay -->
+    <div class="video-background">
+        <video autoplay loop muted>
+            <source src="../images/banner.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <!-- Optional Gradient Overlay -->
+        <div class="gradient-overlay"></div>
+    </div>
+
+    <!-- Hero Section (content below the video) -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>Fuel Your Mind <br>Fuel Your Body</h1>
+            <p id="#paraofhero">Discover meals based on your mood. Our chatbot helps you stay on track with personalized
+                recommendations.</p>
+        </div>
+    </section>
+
+    <!-- Other Sections -->
+    <h2 id="headabout">About Us</h2>
+    <section id="about" class="about">
+        <div class="chatbot-card">
+
+            <p>
+            <h3> Welcome to FeelFuel!</h3>
+
+            At FeelFuel, we're on a mission to help you fuel both your body and mind with personalized meal
+            recommendations that match your mood. We understand that the food you choose can influence how you feel,
+            so our goal is to provide you with healthy and delicious options based on your current emotional state.
+
+            <h3> Our Mission</h3>
+            Our mission is simple: to help you make smarter food choices that enhance your mental and physical
+            well-being. Whether you're feeling stressed, happy, or tired, FeelFuel offers customized meal
+            suggestions that cater to your mood. We believe that food should not only satisfy your hunger but also
+            support your health and happiness.
+
+            <h3> Our Values</h3>
+            Personalization: We provide tailored meal suggestions based on your mood, preferences, and health needs.
+            Well-being: We aim to help you live a healthier life by making informed food choices.
+            Sustainability: We're committed to promoting eco-friendly and sustainable practices in food selection
+            and meal planning.
+            Innovation: We use AI technology to make meal planning easier, smarter, and more effective for everyone.
+            What You Can Expect
+            With FeelFuel, you'll have access to a unique chatbot that helps you discover meals that fit your mood
+            and nutritional needs. Whether you're looking for a quick energy boost, a relaxing snack, or something
+            to cheer you up, we've got you covered. Our platform provides intuitive and easy-to-follow meal
+            recommendations that can help you feel your best.
+
+            </p>
+        </div>
+    </section>
+    <h2 id="headabout">Articles</h2>
+    <section class="articles" id="#articles">
+        <div class="framecard">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <iframe src="https://www.jennyedenberk.com/blogroll/food-as-fuel-what-that-really-means" frameborder="0"
+                    width="300" height="300" style="border-radius:4em;"></iframe>
+                <a href="https://www.jennyedenberk.com/blogroll/food-as-fuel-what-that-really-means"
+                    style="display:block;text-decoration: none;color:#1a3d2f;margin-top:5px;font-weight: 700;">Visit
+                    Website</a>
+            </div>
+        </div>
+
+    </section>
+    <section class="articles">
+        <div class="framecard">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <iframe src="https://www.sciencedirect.com/science/article/abs/pii/S0264837715003579" frameborder="0"
+                    width="300" height="300" style="border-radius:4em;"></iframe>
+                <a href="https://www.sciencedirect.com/science/article/abs/pii/S0264837715003579"
+                    style="display:block;text-decoration: none;color:#1a3d2f;margin-top:5px;font-weight: 700;">Visit
+                    Website</a>
+            </div>
+        </div>
+    </section>
+    <section class="articles">
+        <div class="framecard">
+            <div style="display: flex; flex-direction: column; align-items: center;">
+                <iframe
+                    src="https://www.wbur.org/onpoint/2023/07/17/food-we-need-to-talk-finding-a-better-way-to-discuss-our-bodies-and-what-we-eat"
+                    frameborder="0" width="300" height="300" style="border-radius:4em;"></iframe>
+                <a href="https://www.wbur.org/onpoint/2023/07/17/food-we-need-to-talk-finding-a-better-way-to-discuss-our-bodies-and-what-we-eat"
+                    style="display:block;text-decoration: none;color:#1a3d2f;margin-top:5px;font-weight: 700;">Visit
+                    Website</a>
+            </div>
+        </div>
+    </section>
+<!-- Contact Us Section -->
+<h2 id="headcontact">Contact Us</h2>
+<section id="#contact" class="contact swipe">
+    <div class="contact-card">
+        <form id="contact-form">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+
+            <button type="button" onclick="submitsuccess()">Send Message</button>
+        </form>
+    </div>
+</section>
+<br>
+<br>
+
+
+<section class="chatbot" id="#chatbot">
+    <div class="chatbot" >
+        <button class="button-85" role="button" onclick="gotoq1()"><h1>BoostBot</h1></button>
+    </div>
+</section>
+
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
+
+
+

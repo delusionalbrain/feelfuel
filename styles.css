@@ -1,0 +1,374 @@
+/* Video background section */
+body {
+    margin: 0;
+    background-color: #8ebcac;
+    background: linear-gradient(to bottom right, rgba(231, 227, 221, 0.7), rgba(141, 179, 139, 0.7));
+    z-index: 1;
+}
+
+.video-background {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* Set a fixed height for the video section */
+    z-index: -1;
+    /* Ensure the video stays behind the content */
+}
+
+/* Video styling */
+.video-background video {
+    object-fit: cover;
+    /* Ensure the video fills the container */
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+/* Linear gradient overlay (optional) */
+.video-background .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom right, rgba(231, 227, 221, 0.7), rgba(141, 179, 139, 0.7));
+    z-index: 1;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #3d5a45;
+    padding: 0rem 0rem;
+    color: #fff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    /* Navbar stays on top */
+}
+
+
+.navbar .logo {
+    margin-top: 0;
+}
+
+.navbar nav a {
+    color: #fff;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    font-weight: 500;
+    position: relative;
+}
+
+.navbar nav a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #fff;
+    transition: width .3s;
+}
+
+.navbar nav a:hover::after {
+    width: 100%;
+}
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5rem;
+    animation: fadeIn 2s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100%);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+/* Hero Section */
+.hero-section {
+    position: absolute;
+    top: 15%;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.7rem;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+
+.hero-content h1 {
+    font-size: 4.5rem;
+    color: #ffffff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    animation: fadeInUp 1s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-content button {
+    padding: 0.8rem 1.6rem;
+    background-color: #3d5a45;
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s;
+}
+
+.hero-content button:hover {
+    transform: scale(1.1);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#about {
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 95%;
+    background-color: rgba(141, 179, 139, 0.45);
+    width: 70%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    border-radius: 4em;
+    margin-top: 0rem;
+    margin-left: 10rem;
+    color: #1b4332;
+    box-shadow: 1em 1em 1em #23694c2f;
+}
+
+#headabout {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 2.3rem;
+    margin-left: 33rem;
+    color: #1b4332;
+    margin-bottom: 0.7rem;
+
+}
+
+.about.swipe {
+    animation: slideInLeft 1s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes slideInLeft {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.framecard {
+    display:float;
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 90%;
+    background-color: rgba(141, 179, 139, 0.45);
+    width: 70%;
+    height: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border-radius: 4em;
+    margin-top: 0rem;
+    margin-left: 2rem;
+    color: #1b4332;
+    box-shadow: 1em 1em 1em #23694c2f;
+    width: 350px;
+    height: 350px;
+}
+
+section.articles {
+    display: inline-block;
+    margin-right: 2rem;
+}
+
+
+/* General Styling for Contact Form */
+.contact {
+    max-width: 600px;  /* Set a max width to prevent it from stretching too wide */
+    margin: 0 auto;    /* Center the form on the page */
+    padding: 20px;
+    background-color: rgba(141, 179, 139, 0.45);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    font-family: "Nunito", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+}
+
+#headcontact {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 2.3rem;
+    margin-left: 33rem;
+    color: #1b4332;
+    margin-bottom: 0.7rem;
+}
+
+/* Form Elements */
+.contact form input,
+.contact form textarea {
+    padding: 10px;
+    margin: 5px 0;  /* Reduced margin to have smaller spacing between inputs */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 100%; /* Ensure the form fields take up the full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.contact form textarea {
+    resize: vertical; /* Allow resizing vertically for the textarea */
+}
+
+/* Contact Form Button */
+.contact form button {
+    padding: 10px;
+    background-color: #3d5a45;
+    width: 100%;  /* Make the button take the full width of the form */
+    border: none;
+    color: #fff;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.2s;
+    margin-top: 10px; /* Add a little space above the button */
+}
+
+.contact form button:hover {
+    transform: scale(1.1);
+}
+
+/* CSS */
+.button-85 {
+    padding: 0.6em 2em;
+    border: none;
+    outline: none;
+    color: rgb(255, 255, 255);
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    margin-left:500px;
+    width:300px;
+    height:100px;
+    touch-action: manipulation;
+  }
+  
+  .button-85:before {
+    content: "";
+    background: linear-gradient(
+      45deg,
+      #ff0000,
+      #ff7300,
+      #fffb00,
+      #48ff00,
+      #00ffd5,
+      #002bff,
+      #7a00ff,
+      #ff00c8,
+      #ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing-button-85 20s linear infinite;
+    transition: opacity 0.3s ease-in-out;
+    border-radius: 10px;
+
+  }
+  
+  @keyframes glowing-button-85 {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }
+  
+  .button-85:after {
+    z-index: -1;
+    content: "";
+    position: absolute;
+    background: #222;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+  }
+#chatbot {
+    font-family: "Nunito", sans-serif;
+    font-weight: 700;
+    font-size: 2.3rem;
+    margin-left: 33rem;
+    color: #1b4332;
+    margin-bottom: 0.7rem;
+}
+
